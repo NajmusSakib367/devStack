@@ -56,7 +56,7 @@ In this project, I used it in `Technologies.tsx` to store the selected technolog
 
 When a technology is added or removed, the state updates and React updates the UI.
 
-
+---
 
 ### 4. What does the `useEffect` hook do, and why did you need it to load the JSON data?
 
