@@ -44,7 +44,6 @@ const Footer = () => {
                     </nav>
                 </div>
 
-                {/* Divider */}
                 <div className="my-10 border-t border-[#E2E8F0]" />
 
                 <div className="my-0 flex flex-col items-center justify-between gap-5 text-[11px] font-normal text-[#94A3B8] md:flex-row md:items-center md:text-sm">
