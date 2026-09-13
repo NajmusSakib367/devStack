@@ -2,7 +2,7 @@ import { Suspense } from "react"
 import Navbar from "./components/Navbar"
 import Banner from "./components/Banner"
 import Footer from "./components/Footer"
-import LoadingSpinner from "./components/Loading"
+import Loading from "./components/Loading"
 function App() {
 
   return (
