@@ -54,13 +54,9 @@ For example, this project passes technology data through props, while the select
 
 In this project, I used it in `Technologies.tsx` to store the selected technologies:
 
-```tsx
-const [selectedStack, setSelectedStack] = useState<ITechnology[]>([])
-```
-
 When a technology is added or removed, the state updates and React updates the UI.
 
----
+
 
 ### 4. What does the `useEffect` hook do, and why did you need it to load the JSON data?
 
@@ -68,19 +64,7 @@ When a technology is added or removed, the state updates and React updates the U
 
 **In this project, I did not use `useEffect` to load the JSON data.** I used `fetch()` with a Promise and React's `use()` function instead.
 
-```tsx
-const technologyFetch = async (): Promise<ITechnology[]> => {
-  const response = await fetch('/data.json');
-  const data = await response.json();
-  return data;
-}
-```
-
 Then the data is received in `Technologies.tsx` using:
-
-```tsx
-const technologies = use(technologiesPromise);
-```
 
 ---
 
@@ -90,14 +74,6 @@ The `key` helps React identify each item in a list. It allows React to efficient
 
 In this project:
 
-```tsx
-technologies.map((technology) => (
-  <TechnologyCard
-    key={technology.id}
-    technology={technology}
-  />
-))
-```
 
 Here, `technology.id` is used as the unique key.
 
@@ -108,12 +84,6 @@ Here, `technology.id` is used as the unique key.
 Conditional rendering means showing different UI depending on a condition.
 
 I used it to show an empty-stack message when no technology is selected:
-
-```tsx
-selectedStack.length === 0
-  ? <p>Your stack is empty.</p>
-  : <button>Remove All</button>
-```
 
 If the stack is empty, the user sees **"Your stack is empty."** Otherwise, the **Remove All** button appears.
 
@@ -127,17 +97,8 @@ A child can communicate back to the parent by calling a **function passed throug
 
 For example, `Technologies` passes a function to `TechnologyCard`:
 
-```tsx
-<TechnologyCard
-  technology={technology}
-  handleSelectedStack={handleSelectedStack}
-/>
-```
 
 The child calls that function when the user clicks the button:
 
-```tsx
-onClick={() => handleSelectedStack(technology)}
-```
 
 So the child doesn't directly change the parent's state. It calls the function provided by the parent.
