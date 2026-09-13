@@ -1,4 +1,4 @@
-import type { ITechnology } from "../../types/technology";
+import type { ITechnology } from "../types/technology";
 interface DevStackProps {
   stack: ITechnology,
   handleRemoveSelectedStack: (technology: ITechnology)=> void

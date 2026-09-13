@@ -13,7 +13,6 @@ const Navbar = () => {
             >
               <svg
                 aria-label="Menu"
-                xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -57,7 +56,7 @@ const Navbar = () => {
           <a className="cursor-pointer text-[#0F172A] hover:text-[#D91B7E]">
             Sign In
           </a>
-          <a className="btn rounded-full bg-[#D91B7E] text-white hover:bg-[#D91B7E]">
+          <a className="btn rounded-full bg-[#D91B7F] text-white hover:bg-[#D91B7E]">
             Sign Up
           </a>
         </div>

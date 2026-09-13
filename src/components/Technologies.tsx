@@ -1,7 +1,7 @@
 import TechnologyCard from "./TechnologyCard";
 import DevStack from "./DevStack";
-import type { ITechnology } from "../../types/technology";
 import { use, useState } from "react";
+import type { ITechnology } from "../types/technology";
 import { toast } from "react-toastify";
 
 interface TechnologiesProps {
@@ -45,7 +45,7 @@ const Technologies = ({ technologiesPromise }: TechnologiesProps) => {
             </span>
           </h1>
           <p className="mt-2 tx-[12] lg:text-lg lg:text-left text-center text-[#64748B]">
-            Pick one technology per category to build your ideal stack.
+            Pick one technologyto build your ideal stack.
           </p>
         </div>
         <div className="flex flex-col gap-8 xl:flex-row">
